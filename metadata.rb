@@ -18,3 +18,8 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/test'
+name 'test'
+#depends 'win-telegraf'
+
+# depends 'windows-automation', '~> 0.4.0'
+# depends 'windows-library',  '~> 0.1.0'

@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 14
+  retry_on_exit_code:
+    - 35 # This is the exit code signaling a chef requested reboot
+
+platforms:
+  - name: ubuntu-18.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chef-linux-base::default]
+    attributes:
